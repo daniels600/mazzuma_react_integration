@@ -23,7 +23,6 @@ function HomePage(props) {
     
     function submitHandler(e) {
         e.preventDefault();
-        console.log(state);
         axios
             .post("https://client.teamcyst.com/api_call.php", state)
             .then((response) => {
@@ -39,7 +38,6 @@ function HomePage(props) {
             .post("https://client.teamcyst.com/phase3/mazexchange-api.php", this.data)
             .then((response) => {
             console.log(response.data);
-            //this.setState({ response: response.data });
             })
             .catch((error) => console.error(error));
     }
