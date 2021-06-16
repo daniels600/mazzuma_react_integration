@@ -44,89 +44,77 @@ function HomePage(props) {
 
     const { price, sender_number, recipient_number } = state;
      
-    return (
-        <div className="card-body">
-            <div className="container my-3 bg-light">
-                <div class="col-md-12 text-center">
-                <button type="button" className="btn btn-primary mr-3" onClick={message}> 
-                    Check Balance
-                </button>
-                <button type="button" className="btn btn-success">
-                    Validate Account
-                </button>
-                </div>
-            </div>
-            <div>
+    return(
+		
+			<div className="card-body" style={{ display: "block", textAlign: "center" }}>
+                <div>
                 {state.response != null ? (
-                <div
+                    <div
                     class="alert alert-warning alert-dismissible fade show"
                     role="alert"
-                >
+                    >
                     <h1>{state.response["status"]}</h1>
                     <button
-                    type="button"
-                    className="close"
-                    data-dismiss="alert"
-                    aria-label="Close"
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
                     >
-                    <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
+                    </div>
                 ) : (
-                <p>
+                    <p>
                     No transaction request sent yet. Kindly send by filling the form
                     below.
-                </p>
+                    </p>
                 )}
-            </div>
-            <form onSubmit={submitHandler}>
-                <div className="form-group">
-                    <label>Price</label>
-                    <input
-                        className="form-control py-4"
+                </div>
+                <form onSubmit={submitHandler}>
+                    <div className="form-group">
+                        <label style={{paddingRight: '40px' }}>Price</label>
+                        <input
+                        class="form-control py-4"
                         type="text"
                         placeholder="Enter the price"
                         name="price"
                         value={price}
                         onChange={changeHandler}
-                    />
+                        />
                     </div>
-                <div className="form-group">
-                    <label>Sender's contact</label>
-                    <input
-                        className="form-control py-4"
+                    <div className="form-group">
+                        <label style={{paddingRight: '40px' }}>Sender's contact</label>
+                        <input
+                        class="form-control py-4"
                         type="text"
                         placeholder="Enter sender's number"
                         name="sender_number"
                         value={sender_number}
                         onChange={changeHandler}
-                    />
-                </div>
-
-                <div className="form-group">
-                    <label>Recipient's contact</label>
-                    <input
-                        className="form-control py-4"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label style={{paddingRight: '40px' }}>Recipient's contact</label>
+                        <input
+                        class="form-control py-4"
                         type="text"
                         placeholder="Enter recipient's number"
                         name="recipient_number"
                         value={recipient_number}
                         onChange={changeHandler}
-                    />
-                </div>
-
-                <button
-                type="submit"
-                name="submit"
-                className="btn btn-primary btn-lg btn-block"
-                required
-                >
-                Send
-                </button>
-            </form>
-        </div>
-    );
-
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        name="submit"
+                        className="btn btn-primary btn-lg btn-block"
+                        required
+                    >
+                        Send
+                    </button>
+                </form>
+		    </div>
+		);
 }
 
 export default HomePage; 
