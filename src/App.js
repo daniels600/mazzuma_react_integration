@@ -1,13 +1,11 @@
-//import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-//import PaymentTransac from './components/PaymentTransac';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from './pages/homePage';
-import CheckBalance from './pages/check_balancePage';
-import TransactionStatus from './pages/transaction_status';
-import VerifyAccount from './pages/verifyAccount';
+import HomePage from './pages/HomepageFcn';
+import CheckBalance from './pages/CheckBalanceFcn';
+import TransactionStatus from './pages/TransactionStatusFcn';
+import VerifyAccount from './pages/VerifyAccountFcn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
