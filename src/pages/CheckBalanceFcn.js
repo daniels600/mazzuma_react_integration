@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
+
+const { REACT_APP_MAZZUMA_API } = process.env;
 
 function CheckBalance(props) {
   const [state, setState] = useState({
